@@ -1,0 +1,16 @@
+
+<mat-card  class="food-card">
+    <mat-card-header class="food-card">
+        <mat-card-title class="name">{{food.name}}</mat-card-title>
+           
+            
+        </mat-card-header>
+        <img class="food-image" src="assets/image/food.jpg" alt="Food">
+        
+        <mat-card-actions class="food-actions">
+            <button class="button" *ngIf="!useFavListApi" mat-raised-button (click)="addToFavList()" color="primary">Add To Favourite</button>    
+            <button class="button" mat-raised-button (click)="viewDetails(food.ndbno)" color="primary" align="end">View Details</button>
+            <button class="button" *ngIf="useFavListApi" mat-raised-button (click)="deleteFromFavList()" color="primary">Delete</button>
+            <button class="button" *ngIf="useFavListApi" mat-raised-button (click)="updateFromFavList('update')" color="primary" align="end">Update</button>
+        </mat-card-actions>
+</mat-card>

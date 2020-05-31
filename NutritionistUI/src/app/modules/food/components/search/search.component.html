@@ -1,0 +1,13 @@
+
+<div class="flex-container">
+  <div class="inline">
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+        <input class="input" id="search-button-input" matInput type="text" #box (keyup)="onEnter(box.value)" style="width: 50%">
+        <mat-placeholder>Search</mat-placeholder>
+      </mat-form-field>
+  
+    </form>
+    <food-container [foods]="foods"></food-container>
+    </div>
+  </div>

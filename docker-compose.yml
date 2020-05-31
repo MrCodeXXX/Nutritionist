@@ -1,0 +1,42 @@
+version: '3.2'
+services:
+  user-app:
+   image: user-app
+   build: userservice/
+   restart: always
+   network_mode: host
+   ports:
+     - 9021:9021
+   expose:
+     - 9021
+   depends_on:
+     - food-mysql
+  food-app:
+   image: food-app
+   build: favouriteservice/
+   restart: always
+   network_mode: host
+   ports:
+     - 9041:9041
+   expose:
+     - 9041
+   depends_on:
+     - food-mysql
+
+  food-mysql:
+   image: mysql:5.5
+   network_mode: host
+   ports:
+     - "3306:3306"
+   environment:
+     MYSQL_ROOT_PASSWORD: root
+     MYSQL_DATABASE: food
+  angular:
+    image: angular-app
+    build: NutritionistUI
+    network_mode: host
+    container_name: angular-docker
+    ports:
+      - 4200:4200
+
+

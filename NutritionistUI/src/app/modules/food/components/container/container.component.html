@@ -1,0 +1,3 @@
+<div class="food-container">
+  <food-foodcard *ngFor="let food of foods" [food]="food"  [useFavListApi]="useFavListApi" (addFood)="addFoodToFavList($event)" (deleteFood)="deleteFoodFromFavList($event)"></food-foodcard>
+</div>

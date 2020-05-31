@@ -1,0 +1,51 @@
+.food-card{
+    width : 500px;
+    margin : 10px;
+    
+}
+
+.food-image{
+    height: 279px;
+    
+}
+
+
+
+.food-actions{
+    text-align: right;
+    
+
+}
+
+.name{
+    height: 80px;
+    overflow: hidden;
+    overflow-y: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+
+.name  ::-webkit-scrollbar{
+    widows: 1 px;
+    background:  gray
+    }
+    
+.button{
+        
+        font-family: cursive;
+        
+    }
+
+    @media screen and (min-width: 601px) {
+        div.food-card {
+          font-size: 80px;
+        }
+      }
+      
+      @media screen and (max-width: 600px) {
+        div.food-card {
+          font-size: 30px;
+        }
+      }
+
+      
